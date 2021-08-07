@@ -10,6 +10,10 @@ class Brango():
             file.write(JAVASCRIPT_CODE+"\n")
             file.close()
     def FindIdElement(self, VARIABLE_NAME:str, ID_NAME:str):
-        with open(self.fileName, self.fileWritecommand) as file2:
-            file2.write(f"{VARIABLE_NAME} = document.getElementById('{ID_NAME}');\n")
-            file2.close()
+        with open(self.fileName, self.fileWritecommand) as file:
+            file.write(f"{VARIABLE_NAME} = document.getElementById('{ID_NAME}');\n")
+            file.close()
+    def FindIdWrite(self, VARIABLE_NAME:str, ID_NAME:str, INNERHTML_MESSAGE:str):
+        with open(self.fileName, self.fileWritecommand) as file:
+            file.write(f"{VARIABLE_NAME} = document.getElementById('{ID_NAME}');\n")
+            file.write(f"{VARIABLE_NAME}.innerHTML = '{INNERHTML_MESSAGE}';")
