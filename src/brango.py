@@ -17,3 +17,8 @@ class Brango():
         with open(self.fileName, self.fileWritecommand) as file:
             file.write(f"{VARIABLE_NAME} = document.getElementById('{ID_NAME}');\n")
             file.write(f"{VARIABLE_NAME}.innerHTML = '{INNERHTML_MESSAGE}';")
+            file.close()
+    def SetTitle(self, NEW_TITLE_NAME):
+        with open(self.fileName, self.fileWritecommand) as file:
+            file.write(f"document.title = '{NEW_TITLE_NAME}';")
+            file.close()
