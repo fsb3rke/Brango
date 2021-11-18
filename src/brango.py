@@ -9,6 +9,10 @@ class Brango():
         with open(self.fileName, self.fileWritecommand) as file:
             file.write(JAVASCRIPT_CODE+"\n")
             file.close()
+    def AppendFile(self, JAVASCRIPT_CODE:str):
+        with open(self.fileName, self.fileWritecommand) as file:
+            file.write(JAVASCRIPT_CODE)
+            file.close()
     def FindIdElement(self, VARIABLE_NAME:str, ID_NAME:str):
         with open(self.fileName, self.fileWritecommand) as file:
             file.write(f"{VARIABLE_NAME} = document.getElementById('{ID_NAME}');\n")
